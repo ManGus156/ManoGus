@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario De Curriculo</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+    <h1>Envio De Curriculo:</h1>
+    <fieldset>
+        
+            <legend>Informações Pessoais</legend>
+            <label for="Nome Completo"><b>Nome Completo:</b>
+                <input type="text" id="Nome Completo" placeholder="Digite Seu Nome Completo" requiredm inlength="3" maxlength="20" autofocus>
+            </label>
+            <br><br>
+
+            <label for="Email"><b>Email:</b>
+                <input type="email" id="Email" placeholder="Digite Seu Email" required autocomplete="email">
+            </label>
+            <br><br>
+
+            <label for="password"><b>Senha:</b>
+                <input type="password" id="password" placeholder="Digite Sua Senha" required + minlength="8">
+            </label>
+            <br><br>
+
+            <label for="Data De Nascimento"><b>Data De Nascimento:</b><input type="date" id="Data De Nascimento">
+            </label>
+            <br><br>
+        
+            <label for="Telefone"><b>Telefone:</b><input type="tel" id="Telefone" placeholder="Ex: (00) 00000-0000" required + pattern="[0-9]{10,11}">
+            </label>
+            <br><br>
+
+            <label for="url"><b>Site Pessoal:</b>
+                <input type="url" id="url">
+            </label>
+            <br><br>
+
+            <label for="Faixa Salarial"><b>Faixa Salarial:</b><br>
+                <input type="range" id="faixaSalarial" name="faixaSalarial" min="1000" max="5000" value="1000">
+            <span id="valorSalario">R$1000</span>
+            </label>
+
+            <script>
+                // Seleciona o input range e o span onde o valor será exibido
+                const slider = document.getElementById("faixaSalarial");
+                const output = document.getElementById("valorSalario");
+        
+                // Atualiza o valor inicial
+                output.textContent = slider.value;
+        
+                // Adiciona um evento para atualizar o valor enquanto o slider é movido
+                slider.addEventListener("input", function() {
+                    output.textContent = this.value;
+                });
+            </script>
+            
+            <br><br>
+
+            <label for="Files">Curriculo(PDF):
+                <input type="file" + accept=".pdf">
+            </label>
+            <br><br>
+            
+            <label for="Genero"><b>Genero:</b">
+                <input type="radio" value="Masculino" name="Genero" required>Masculino
+                <input type="radio" value="Feminino" name="Genero" required>Feminino
+            </label>
+            <br><br>
+
+
+            <label for="text">Preferencias:
+                <br><input type="checkbox" name="Preferencias" id="Preferencias" checked>Receber Novidades
+            </label>
+            <br><br>
+        
+            <label for="Comentario">Comentarios:</label><br>
+            <textarea name="Comentario" id="" placeholder="Deixe Seu Comentario"></textarea>
+            <br><br>
+        
+            <button type="submit"><b>Enviar</b></button>
+            <br><br>
+            <button><a style="color: black;" href="https://www.unifoa.edu.br/" target="_blank" rel="external"><b>Mais Informações</b></a></button>
+        
+    </fieldset>
+
+</body>
+</html>
